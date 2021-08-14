@@ -34,7 +34,6 @@ public class ProjectService {
         else {
             throw new RuntimeException();
         }
-
     }
 
     public void updateProject(Long id,ProjectDTO project) {
@@ -45,7 +44,7 @@ public class ProjectService {
     }
     public ProjectDTO getProjectById(Long id) {
         // wemm er kein Projekt Findet Exception werfen ( Controller fängt diese dann)
-        Project foundProject = myProjectRepo.findById(id).orElseThrow(() -> new RuntimeException());
+        Project foundProject = myProjectRepo.findById(id).orElseThrow(RuntimeException::new);
         return projectMapper.entityToDto(foundProject);
     }
     public Collection<ProjectDTO> getProjects()  {
