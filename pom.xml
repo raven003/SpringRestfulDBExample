@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.restful.api.h2</groupId>
-	<artifactId>restful.api.h2</artifactId>
+	<artifactId>example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>restful.api.h2</name>
+	<name>example</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
