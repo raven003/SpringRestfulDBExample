@@ -23,6 +23,14 @@ public class Project {
     String note;
 
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -69,13 +77,5 @@ public class Project {
 
     public void setNote(String note) {
         this.note = note;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 }
