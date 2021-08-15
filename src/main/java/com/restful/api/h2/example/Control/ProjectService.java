@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -18,17 +20,14 @@ import java.util.stream.StreamSupport;
 public class ProjectService {
 
     @Autowired
-    ProjectRepo myProjectRepo;
-
+     ProjectRepo myProjectRepo;
     @Autowired
     ProjectMapper projectMapper;
-
 
     public URI postProject(ProjectDTO project) throws URISyntaxException {
         Project createdItem = myProjectRepo.save(projectMapper.dtoToEntity(project));
         return new URI("localhost:8080/api/project/" +createdItem.getId());
     }
-
     public void deleteProject(Long id) {
         if(myProjectRepo.existsById(id)) {
             myProjectRepo.deleteById(id);
