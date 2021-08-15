@@ -36,15 +36,6 @@ public class ProjectController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @GetMapping(path = "project/hello")
-    public ResponseEntity<String> hello(){
-        try {
-            return ResponseEntity.ok("hello World");
-        }
-        catch(Exception e){
-            return ResponseEntity.badRequest().build();
-        }
-    }
 
     @PostMapping(path = "project/")
     public ResponseEntity<URI> postProject (@RequestBody ProjectDTO project) throws URISyntaxException {
